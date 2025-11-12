@@ -3,46 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulo que saldra en la pestaña de la pagina, no en la pagina donde esta todo el contenido -->
     <title>Feliz Navidad</title>
+    <!-- Favicon: ícono que aparece en la pestaña del navegador -->
     <link rel="icon" href="../../favicons/feliznavidad.png">
 </head>
 <body>
-    <a href="../../enlaces/discografia.html">Inicio</a>
+    <!-- Identificador para poder regresar a la lista de discografias-->
+    <a href="../../enlaces/discografia.html">VOLVER A DISCOGRAFIA</a>
+    <!-- encabezado principal-->
     <header id="Volver_principio">
         <h1>FELIZ NAVIDAD</h1>
         <p>Feliz Navidad es el quinto álbum de estudio como solista de Héctor Lavoe, con el aporte de Daniel Santos y Yomo Toro. Fue lanzado el <strong>28 de noviembre de 1979</strong>, bajo el sello de Fania Records, y Johnny Pacheco fue el director de grabación. </p>
     </header>
+    <!--Navegacion indice de la pagina-->
     <nav>
         <ol>
             <li><a href="#Lista canciones">Lista de canciones</a></li>
             <li><a href="#Audio">Muestra de una de sus canciones mas escuchadas del albúm</a></li>
         </ol>
     </nav>
+    <!-- Contenido principal del sitio -->
     <main>
-    <section id="Lista_canciones">
-        <h2>Lista de canciones</h2>
-        <ol>
-            <li>Monserrate</li>
-            <li>Señor Brownie</li>
-            <li>La Parranda Fanía</li>
-            <li>Joven contra Viejo</li>
-            <li>En la Navidad</li>
-            <li>El Lechón de Cachete</li>
-            <li>Una Peña en Navidad</li>
-            <li>Dame un Chance</li>
-        </ol>
-        <figure>
-            <img src="../../imagenes/feliznavidad.jpg" alt="Feliz Navidad" width="250" height="250">
-        </figure>
-    </section>
-    <section id="Audio">
-        <h2>Muestra de una de sus canciones mas escuchadas del albúm</h2>
-        <p>Cancion: <strong>UNA PENA EN NAVIDAD</strong></p>
-        <audio controls>
-            <source src="../../audios/solitario/unapenanvidad.mp3">
-        </audio>
-    </section>
+        <!-- Seccion de lista de canciones del album -->
+        <section id="Lista_canciones">
+            <h2>Lista de canciones</h2>
+            <ol>
+                <li>Monserrate</li>
+                <li>Señor Brownie</li>
+                <li>La Parranda Fanía</li>
+                <li>Joven contra Viejo</li>
+                <li>En la Navidad</li>
+                <li>El Lechón de Cachete</li>
+                <li>Una Peña en Navidad</li>
+                <li>Dame un Chance</li>
+            </ol>
+            <!-- Figura de la portada del album -->
+            <figure>
+                <img src="../../imagenes/feliznavidad.jpg" alt="Feliz Navidad" width="250" height="250">
+            </figure>
+        </section>
+        <!-- Seccion de reproductor de audio -->
+        <section id="Audio">
+            <h2>Muestra de una de sus canciones mas escuchadas del albúm</h2>
+            <p>Cancion: <strong>UNA PENA EN NAVIDAD</strong></p>
+            <!-- Reproductor de audio -->
+            <audio controls>
+                <!-- Archivo de audio que se puede reproducir -->
+                <source src="../../audios/solitario/unapenanvidad.mp3">
+            </audio>
+        </section>
     </main>
+    <!-- Pie de página con un enlace para volver al inicio -->
     <a href="#Volver_principio">Volver al inicio de la pagina</a>
 </body>
 </html>

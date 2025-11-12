@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulo que saldra en la pestaña de la pagina, no en la pagina donde esta todo el contenido -->
     <title>Lo Mato</title>
+    <!-- Favicon: ícono que aparece en la pestaña del navegador -->
     <link rel="icon" href="../../favicons/lomato.ico">
 </head>
 <body>
-    <a href="../../enlaces/discografia.html">INICIO</a>
+    
+    <!-- Identificador para poder regresar a la lista de discografias-->
+    <a href="../../enlaces/discografia.html">VOLVER A DISCOGRAFIA</a>
+    <!-- encabezado principal-->
     <header>
         <h1 id="Volver_incio">LO MATO</h1>
         <p>Lo Mato  conocido comúnmente como Lo Mato es el octavo y penúltimo álbum de estudio de Willie Colón & Héctor Lavoe, lanzado el <strong>31 de diciembre de 1973</strong> por el sello Fania Records</p>
     </header>
+    <!--Navegacion indice de la pagina-->
     <nav>
         <ol>
             <li><a href="#Contexto_album">Contexto del albúm</a></li>
@@ -20,37 +26,47 @@
             <li><a href="#Audio">Muestra de una de las canciones mas escuchadas del albúm</a></li>
         </ol>
     </nav>
-    <section id="Contexto_album">
-        <h2>Contexto del albúm</h2>
-        <p>El disco fue grabado en el Good Vibrations Sound Studios y los temas destacados son «Todo tiene su final», «Calle luna, Calle sol», «El día de suerte»,esta última narrando de forma implícita la desgarradora vida de Héctor Lavoe en su infancia dejando ver claros sucesos como la muerte de su madre a muy temprana edad y también la de su padre a los 10 años dejando el mensaje: "el día de mi suerte llegará ¿pero cuando será?".Además este álbum fue grabado en medio de las tensiones profesionales entre Héctor Lavoe y Willie Colón debido a la descontrolada vida del cantante, si bien éstas no se alcanzan a notar en los sencillos del álbum. Fue lanzado el <strong>31 de diciembre de 1973</strong></p>
-    </section>
-    <section id="Portada">
-        <h2>Portada</h2>
-        <p>La portada de este LP cuenta con Willie amenazando a su víctima con una pistola, en la contraportada aparece la víctima reduciendo a Colón.</p>
-        <figure>
-            <img src="../../imagenes/lomato.jpg" alt="Lo Mato" width="250" height="250">
-        </figure>
-    </section>
-    <section id="Lista_canciones">
-        <h2>Lista de canciones</h2>
-        <ol>
-            <li>Calle Luna, Calle Sol</li>
-            <li>Todo Tiene Su Final</li>
-            <li>Guajira Ven</li>
-            <li>La María</li>
-            <li>Señora Lola</li>
-            <li>El Día De Suerte</li>
-            <li>Vo So</li>
-            <li>Junio '73</li>
-        </ol>
-    </section>
-    <section id="Audio">
-        <h2>Muestra de una de las canciones más escuchadas del albúm</h2>
-        <p>Cancion: <strong>EL DIA DE MI SUERTE</strong></p>
-        <audio controls>
-            <source src="../../audios/orquestawilliecolon/eldiademisuerte.mp3" type="audio/mpeg">
-        </audio>
-    </section>
+    <main>
+        <!--Seccion de contexto del album-->
+        <section id="Contexto_album">
+            <h2>Contexto del albúm</h2>
+            <p>El disco fue grabado en el Good Vibrations Sound Studios y los temas destacados son «Todo tiene su final», «Calle luna, Calle sol», «El día de suerte»,esta última narrando de forma implícita la desgarradora vida de Héctor Lavoe en su infancia dejando ver claros sucesos como la muerte de su madre a muy temprana edad y también la de su padre a los 10 años dejando el mensaje: "el día de mi suerte llegará ¿pero cuando será?".Además este álbum fue grabado en medio de las tensiones profesionales entre Héctor Lavoe y Willie Colón debido a la descontrolada vida del cantante, si bien éstas no se alcanzan a notar en los sencillos del álbum. Fue lanzado el <strong>31 de diciembre de 1973</strong></p>
+        </section>
+        <!-- Seccion de la portada del album -->
+        <section id="Portada">
+            <h2>Portada</h2>
+            <p>La portada de este LP cuenta con Willie amenazando a su víctima con una pistola, en la contraportada aparece la víctima reduciendo a Colón.</p>
+            <!-- Figura de la portada del album -->
+            <figure>
+                <img src="../../imagenes/lomato.jpg" alt="Lo Mato" width="250" height="250">
+            </figure>
+        </section>
+        <!-- Seccion de lista de canciones del album -->
+        <section id="Lista_canciones">
+            <h2>Lista de canciones</h2>
+            <ol>
+                <li>Calle Luna, Calle Sol</li>
+                <li>Todo Tiene Su Final</li>
+                <li>Guajira Ven</li>
+                <li>La María</li>
+                <li>Señora Lola</li>
+                <li>El Día De Suerte</li>
+                <li>Vo So</li>
+                <li>Junio '73</li>
+            </ol>
+        </section>
+        <!-- Seccion de reproductor de audio -->
+        <section id="Audio">
+            <h2>Muestra de una de las canciones más escuchadas del albúm</h2>
+            <p>Cancion: <strong>EL DIA DE MI SUERTE</strong></p>
+            <!-- Reproductor de audio -->
+            <audio controls>
+                <!-- Archivo de audio que se puede reproducir -->
+                <source src="../../audios/orquestawilliecolon/eldiademisuerte.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+    </main>
+    <!-- Pie de página con un enlace para volver al inicio -->
     <a href="#Volver_incio">Volver al inicio de la página</a>
 </body>
 </html>
