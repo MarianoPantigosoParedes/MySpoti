@@ -1,127 +1,73 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<!-- Metadatos básicos del documento -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Título que aparecerá en la pestaña -->
-<title>Suscripción a la newsletter del artista</title>
-<!-- Favicon: ícono pequeño que aparece en la pestaña del navegador -->
-<link rel="icon" href="../favicons/newsletter.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscripción newsletter</title>
+    <link rel="icon" href="../favicons/newsletter.png">
 </head>
 <body>
-    <!-- Encabezado principal -->
     <header>
         <h1>Suscríbete a la newsletter del artista</h1>
         <p>Recibe noticias, conciertos y lanzamientos directamente en tu correo electrónico.</p>
     </header>
-    <!-- Contenido principal -->
-    <main>
-    <!-- Formulario de suscripción -->
-    <!-- method="post" es más seguro que "get" porque no muestra los datos en la URL -->
-        <form action="/suscripcion" method="post">
-<!-- Agrupación de datos personales -->
-      <fieldset>
-        <legend>Datos personales</legend>
-
-        <!-- Nombre -->
-        <!-- Comentario: campo de texto normal, obligatorio -->
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required maxlength="60" autocomplete="given-name"><br><br>
-
-        <!-- Apellidos -->
-        <label for="apellidos">Apellidos:</label><br>
-        <input type="text" id="apellidos" name="apellidos" required maxlength="80" autocomplete="family-name"><br><br>
-
-        <!-- Edad -->
-        <!-- Comentario: type="number" permite validar solo números -->
-        <label for="edad">Edad:</label><br>
-        <input type="number" id="edad" name="edad" min="1" max="120" required><br><br>
-
-        <!-- País -->
-        <!-- Comentario: select es más apropiado que input type="text" para una lista cerrada -->
-        <label for="pais">País:</label><br>
-        <select id="pais" name="pais" required>
-          <option value="">-- Selecciona tu país --</option>
-          <option value="ES">España</option>
-          <option value="MX">México</option>
-          <option value="AR">Argentina</option>
-          <option value="CO">Colombia</option>
-          <option value="US">Estados Unidos</option>
-          <option value="OTRO">Otro</option>
-        </select><br><br>
-
-        <!-- Campo adicional opcional si el usuario elige "Otro" -->
-        <label for="otro-pais">Si elegiste "Otro", especifica tu país:</label><br>
-        <input type="text" id="otro-pais" name="otro_pais" maxlength="80"><br>
-      </fieldset>
-
-      <br>
-
-      <!-- Agrupación de información de contacto -->
-      <fieldset>
-        <legend>Contacto e intereses</legend>
-
-        <!-- Correo electrónico -->
-        <!-- Comentario: type="email" valida el formato automáticamente -->
-        <label for="email">Correo electrónico:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <!-- Intereses -->
-        <!-- Comentario: checkboxes permiten elegir varias opciones -->
-        <p>Selecciona tus intereses:</p>
-        <input type="checkbox" id="conciertos" name="intereses" value="conciertos">
-        <label for="conciertos">Conciertos y giras</label><br>
-
-        <input type="checkbox" id="lanzamientos" name="intereses" value="lanzamientos">
-        <label for="lanzamientos">Lanzamientos y discos</label><br>
-
-        <input type="checkbox" id="merch" name="intereses" value="merch">
-        <label for="merch">Merchandising y ofertas</label><br>
-
-        <input type="checkbox" id="backstage" name="intereses" value="backstage">
-        <label for="backstage">Detrás de cámaras</label><br>
-
-        <input type="checkbox" id="otro-interes" name="intereses" value="otro">
-        <label for="otro-interes">Otro</label><br><br>
-
-        <!-- Campo extra si marca "Otro" -->
-        <label for="detalle-interes">Si elegiste "Otro", especifica cuál:</label><br>
-        <input type="text" id="detalle-interes" name="detalle_interes" maxlength="100"><br><br>
-
-        <!-- Comentario: área de texto opcional -->
-        <label for="comentarios">Comentarios (opcional):</label><br>
-        <textarea id="comentarios" name="comentarios" rows="4" cols="40" placeholder="Escribe tus comentarios..."></textarea><br>
-      </fieldset>
-
-      <br>
-
-      <!-- Confirmación de consentimiento -->
-      <fieldset>
-        <legend>Consentimiento</legend>
-
-        <!-- Comentario: checkbox obligatorio para confirmar consentimiento -->
-        <input type="checkbox" id="consent" name="consent" required>
-        <label for="consent">Acepto recibir correos electrónicos del artista y la política de privacidad.</label><br>
-      </fieldset>
-
-      <br>
-
-      <!-- Botones de acción -->
-      <input type="submit" value="Suscribirme">
-      <input type="reset" value="Borrar formulario">
-
+    <form action="process.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>DATOS PERSONALES</legend>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre"><br>
+            <label for="apellido">Apellidos:</label><br>
+            <input type="text" id="apellido" name="apellido"><br><br>
+            <label for="edad">Edad:</label><br>
+            <input type="number" id="edad" name="edad"  min="0" max="100" required><br><br>
+            <label for="pais">Seleciona tu pais:</label> <br>
+            <select id="pais" name="pais" required>
+                <option value="">--Selecciona tu pais--</option>
+                <option value="España">España</option>
+                <option value="Peru">Peru</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Ecuador">Ecuador</option>
+            </select><br>
+            <label for="text">Si tu pais no aparece escribelo en este recuadro:</label> <br>
+            <input type="text" id="text" name="text">
+        </fieldset><br>
+        <fieldset>
+            <legend>CONTACTO</legend>
+            <label for="numero">NUMERO DE TELEFONO</label> <br>
+            <input type="tel" id="numero" name="numero"><br><br>
+            <label for="email">CORREO ELECTRONICO</label><br>
+            <input type="email" id="email" name="email" required> <br><br>
+        </fieldset>
+        <fieldset>
+            <legend>SELECCIONA TUS INTERESES</legend>
+            <label>
+                <input type="checkbox" name="intereses" value="conciertos">
+                Conciertos
+            </label>
+            <label>
+                <input type="checkbox" name="intereses" value="lanzamientos_discos">
+                Lanzamientos y discos
+            </label>
+            <label>
+                <input type="checkbox" name="intereses" value="merchandising">
+                Merchandising y ofertas
+            </label>
+            <label>
+                <input type="checkbox" name="intereses" value="otros">
+                Otros
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Consentimiento</legend>
+            <label>
+                <input type="checkbox" name="consentimiento" value="consentimiento">
+                Acepto recibir correos electrónicos del artista y la política de privacidad.
+            </label>
+        </fieldset><br>
+        <section>
+            <input type="submit" value="suscribirme"> 
+            <input type="reset" value="Eliminar formulario"> 
+        </section>
     </form>
-
-  </main>
-
-  <br>
-
-  <!-- Pie de página -->
-  <footer>
-    <!-- Comentario: enlace a política de privacidad (recomendado al recopilar datos personales) -->
-    <p>Consulta nuestra <a href="/privacidad.html">política de privacidad</a> para más información.</p>
-  </footer>
-
 </body>
 </html>
